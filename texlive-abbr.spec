@@ -3,7 +3,7 @@ Version:	20070525
 Release:	1
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive//macros/generic/abbr
+URL:		http://www.ctan.org/tex-archive/macros/generic/abbr
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.doc.tar.xz
@@ -25,11 +25,13 @@ parameterless macros.
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
