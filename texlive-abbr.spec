@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/generic/abbr
+# catalog-date 2007-05-25 16:15:27 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-abbr
 Version:	20070525
 Release:	1
@@ -38,6 +44,7 @@ parameterless macros.
 %files
 %{_texmfdistdir}/tex/generic/abbr/abbr.tex
 %doc %{_texmfdistdir}/doc/generic/abbr/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -48,3 +55,5 @@ parameterless macros.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
