@@ -32,7 +32,6 @@ parameterless macros.
 	%{_sbindir}/texlive.post
     fi
 
-
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/generic/abbr/abbr.tex
