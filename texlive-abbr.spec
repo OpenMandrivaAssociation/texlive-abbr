@@ -5,8 +5,8 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-abbr
-Version:	20070525
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/abbr
