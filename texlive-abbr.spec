@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-abbr
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
