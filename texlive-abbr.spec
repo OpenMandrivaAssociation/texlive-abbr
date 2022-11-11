@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/generic/abbr
-# catalog-date 2007-05-25 16:15:27 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-abbr
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/abbr
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ hence frees users from having to escape space after
 parameterless macros.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,25 +33,10 @@ parameterless macros.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070525-2
-+ Revision: 749042
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070525-1
-+ Revision: 717782
-- texlive-abbr
-- texlive-abbr
-- texlive-abbr
-- texlive-abbr
-- texlive-abbr
-
