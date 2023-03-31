@@ -1,6 +1,6 @@
 Name:		texlive-abbr
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/abbr
