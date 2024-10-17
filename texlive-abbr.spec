@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Simple macros supporting abreviations for Plain and LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/abbr
+URL:		https://www.ctan.org/tex-archive/macros/generic/abbr
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abbr.doc.r%{version}.tar.xz
